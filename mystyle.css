@@ -1,0 +1,286 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Microsoft YaHei";
+  color: white;
+  font-size:16px ;
+}
+
+@media only screen and (min-width: 320px){
+    html {
+        font-size: 10px;
+    }
+}
+@media only screen and (min-width: 640px){
+    html {
+        font-size: 12px!important;
+    }
+}
+@media only screen and (min-width: 768px){
+    html {
+        font-size: 18px!important;
+    }
+}
+@media only screen and (min-width: 1024px){
+    html {
+        font-size: 24px!important;
+    }
+}
+@media only screen and (min-width: 1200px){
+    html {
+        font-size: 28px!important;
+    }
+}
+
+body {
+  background: #ffffff;
+  text-align: center;
+  overflow: hidden;
+}
+
+.main {
+  background-image: url(images/background.jpg); 
+  background-size: 100% 100%;
+  height:23.5rem;
+  width:80%;
+  overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3rem;
+  position: relative;
+  border: 5px solid #ffff99;
+  border-radius: 20px;
+}
+.name {
+  margin-top: 10rem;
+  font-size: 3rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+
+}
+.topName {
+  margin-top: 3rem;
+  font-size: 3rem;
+  font-weight: bold;
+}
+.button {
+    width: 5rem;
+    margin-bottom: 0.5rem;
+   border-top: 1px solid #96d1f8;
+   background: #8da4b3;
+/*    background: -webkit-gradient(linear, left top, left bottom, from(#91aaba), to(#8da4b3));
+   background: -webkit-linear-gradient(top, #91aaba, #8da4b3);
+   background: -moz-linear-gradient(top, #91aaba, #8da4b3);
+   background: -ms-linear-gradient(top, #91aaba, #8da4b3);
+   background: -o-linear-gradient(top, #91aaba, #8da4b3); */
+   padding: 5px 10px;
+   border-radius: 8px;
+   box-shadow: rgba(0,0,0,1) 0 1px 0;
+   text-shadow: rgba(0,0,0,.4) 0 1px 0;
+   color: white;
+   font-size: 0.8rem;
+   font-family: Helvetica, Arial, Sans-Serif;
+   text-decoration: none;
+   vertical-align: middle;
+   }
+.button:hover {
+
+   background: #496b82;
+   color: #ccc;
+   }
+.button:active {
+   border-top-color: #1b435e;
+   background: #1b435e;
+   }
+
+.select_text {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3.2rem;
+  height: 3.8rem;
+  line-height: 3.8rem;
+  text-align: center;
+  border: 5px solid;
+  border-color: #a4a65e;
+  border-radius: 5px;
+  color: white;
+  font-size: 1rem;
+  font-style: bold;
+}
+.category_text {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
+  text-align: center;
+  color: white;
+  font-size: 0.7rem;
+  overflow: hidden;
+  word-break: break-all;
+  -webkit-line-clamp:3;
+  text-overflow: ellipsis;
+}
+
+.line {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.category {
+  width: 3.5rem;
+  height: 3.5rem;
+/*   line-height: 80px; */
+  border: 3px solid;
+  border-color: #1b1f21;
+  border-radius: 5px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
+  display: inline-block;
+  background-color: white;
+}
+.picture {
+  width: 70%;
+  height: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0.2rem;
+  display: block;
+}
+.categoryName {
+  color: #a41f1f;
+  font-size: 0.5rem;
+}
+
+.leftPanel {
+  float: left;
+  margin-left: 1rem;
+  font-size: 0.5rem;
+}
+.rightPanel {
+  float: right;
+  margin-right: 1rem;
+}
+
+.timeAndScore {
+  text-align: center;
+  border: 3px solid #ffffcc;
+  border-radius: 5px;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+.timeNarrowWidth {
+  width: 3.5rem;
+}
+
+.timeBroadWidth {
+  width: 12rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.normalText {
+  margin-top: 0.3rem;
+}
+.smallFontSize {
+  font-size: 0.6rem;
+}
+.bigFontSize {
+  font-size: 1.5rem;
+}
+.gamename {
+  margin-top: 0.5rem;
+  font-size: 1.2rem;
+  font-family: Helvetica, Arial, Sans-Serif;
+}
+.settingAndReturn {
+  margin-top: 1rem;
+  height: 2rem;
+}
+.image {
+  height: 100%;
+}
+.number {
+  margin-top: 0.6rem;
+  margin-bottom: 0.6rem;
+}
+.letterMargin {
+  margin-bottom: 1rem;
+}
+.wordGuess {
+  width: 80%;
+  height: 1.5rem;
+  margin-bottom: 1rem;
+  bottom: 0px;
+  clear: both;
+  margin-left: auto;
+  margin-right: auto;
+}
+.letter {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.imageLetter, .blankLetter{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-right: 0.2rem;
+  border-radius: 5px;
+}
+.hangman {
+  width: 20rem;
+  height: 16rem;
+  clear: both;
+  display: inline-block;
+  overflow: hidden;
+  margin-top: 4rem;
+}
+.hangmansvg {
+  width: 100%;
+  height: 100%;
+  .margin: auto;
+}
+/* .hangmanPic {
+  width: 100%;
+} */
+.wordPic {
+  width: 5rem;
+  height: 5rem;
+  margin-top: 8rem;
+}
+.buttonInterval {
+  margin-right: 5rem;
+}
+.picArea {
+  height: 8rem;
+  margin-top: 6rem;
+}
+.leftArrow, .rightArrow {
+  height: 5rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
+  margin-top: 2rem;
+  /* margin-bottom: 1.5rem; */
+}
+.buttonArea {
+  float: left;
+  margin-left: 2rem;
+  margin-top: 2rem;
+}
+.wordReviewPic {
+  height: 7.6rem;
+  width: 7.6rem;
+  border: 4px solid #e2e832;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 0.1rem;
+}
+.wordPicDisplay {
+  width: 6rem;
+  height: 6rem;
+  margin-top: 1rem;
+}
+.wordDisplay {
+  margin-top: 2rem;
+}

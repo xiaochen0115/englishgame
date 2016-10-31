@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Hang Man</title>
+
+    <link href="mystyle.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var id = getUrlParam("id");
+        var currentWords = words[id];
+        var currentIndex = 0;
+        var currentTotal = currentWords.length;
+        var currentWord = currentWords[currentIndex];
+        var currentLength = currentWord.length;
+
+        setGuessPicAndLetter();
+
+        $(".leftArrow").click(function() {
+          if (currentIndex > 0) {
+            currentIndex--;
+          } else {
+            currentIndex = currentTotal - 1;
+          }
+          setGuessPicAndLetter();
+        });
+
+        $(".rightArrow").click(function() {
+          if (currentIndex < currentTotal - 1) {
+            currentIndex++;
+          } else {
+            currentIndex = 0;
+          }
+          setGuessPicAndLetter();
+        });
+
+        function setGuessPicAndLetter() {
+          currentWord = currentWords[currentIndex];
+          currentLength = currentWord.length;
+
+          //放置图片
+          var picSrc = currentWord.replace(/\s/g,"");
+          $(".wordPicDisplay").attr('src', 'images/' + categories[id] + '/' + picSrc + ".png");
+          console.log($(".wordPicDisplay").attr('src'));
+          //根据长度放置黄色字母方块
+          var wordHtml = "";
+          for (var i=0; i<currentLength; i++) {
+            if ( currentWord[i] != " ") {
+              wordHtml += '<img class="imageLetter" ' + 'src="images/guess' + currentWord[i].toUpperCase() + '.png">';
+              // console.log(wordHtml);
+            } else {
+              wordHtml += '<img class="blankLetter" ' + 'id="' + i.toString() + '"' + ' src="images/blankLetter.png">'
+            }
+          }
+          // console.log(wordHtml);
+          $(".wordDisplay").html(wordHtml);
+        }
+
+      });
+      
+    </script>
+
+
+</head>
+<body>
+  <div class="main">
+    <div class="picArea">
+        <img class="leftArrow" src="images/leftArrow.png">
+        </img>
+        <span class="wordReviewPic"><img class="wordPicDisplay" src="images/banana.png"></img>
+        </span>
+        <img class="rightArrow" src="images/rightArrow.png">
+        </img>
+    </div>
+
+    <div class="wordDisplay">
+    </div>
+
+    <div class="buttonArea">
+      <a href="category.html?review=1"><button class="button">Back</button></a>
+    </div>
+  </div>
+</body>
+</html>

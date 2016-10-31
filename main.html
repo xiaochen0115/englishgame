@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+
+    <title>Hang Man</title>
+
+  <link href="mystyle.css" rel="stylesheet">
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="common.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</head>
+<body>
+  <div class="main">
+    <div class="leftPanel">
+
+      <div class="timeAndScore timeNarrowWidth">
+        <span class="normalText smallFontSize">
+        Time 
+        </span>
+        <br>
+        <span class="timeValue smallFontSize">
+        00:00:00
+        </span>
+        <br>
+        <div class="normalText smallFontSize">
+        Score 
+        </div>
+        <div class="scoreValue smallFontSize">
+        0
+        </div>
+      </div>
+
+      <div class="vowel">
+        <img class="letter" id="a" src="images/letterA.png">
+        <br>
+        <img class="letter" id="e" src="images/letterE.png">
+        <br>
+        <img class="letter" id="i" src="images/letterI.png">
+        <br>
+        <img class="letter" id="o" src="images/letterO.png">
+        <br>
+        <img class="letter" id="u" src="images/letterU.png">
+        <br>
+      </div>
+
+      <div class="gamename">
+      Hang<br>Man
+      </div>
+    </div>
+
+  <div class="hangman">
+    <!-- <svg class="hangmansvg" width="580" height="400" xmlns="http://www.w3.org/2000/svg"> -->
+    <svg class="hangmansvg" xmlns="http://www.w3.org/2000/svg">
+    </svg>
+  </div>
+
+  <div class="rightPanel">
+    <div class="settingAndReturn">
+      <!-- <img class="image" src="images/setting.png"> -->
+      <img class="image" src="images/return.png">
+    </div>
+
+    <div class="number">
+      <span id="current">
+      1
+      </span>
+      /
+      <span id="total">
+      1
+      </span>
+    </div>
+
+    <div class="consonant">
+      <div class="line1">
+        <img class="letter" id="b" src="images/letterB.png"><img class="letter" id="c" src="images/letterC.png"><img class="letter" id="d" src="images/letterD.png">
+      </div>
+      <div class="line2 letterMargin">
+        <img class="letter" id="f" src="images/letterF.png"><img class="letter" id="g" src="images/letterG.png"><img class="letter" id="h" src="images/letterH.png"><img class="letter" id="j" src="images/letterJ.png">
+      </div>
+      <div class="line3">
+        <img class="letter" id="k" src="images/letterK.png"><img class="letter" id="l" src="images/letterL.png"><img class="letter" id="m" src="images/letterM.png">
+      </div>
+      <div class="line4 letterMargin">
+        <img class="letter" id="n" src="images/letterN.png"><img class="letter" id="p" src="images/letterP.png"><img class="letter" id="q" src="images/letterQ.png"><img class="letter" id="r" src="images/letterR.png">
+      </div>
+      <div class="line5">
+        <img class="letter" id="s" src="images/letterS.png"><img class="letter" id="t" src="images/letterT.png"><img class="letter" id="v" src="images/letterV.png">
+      </div>
+      <div class="line6 letterMargin">
+        <img class="letter" id="w" src="images/letterW.png"><img class="letter" id="x" src="images/letterX.png"><img class="letter" id="y" src="images/letterY.png"><img class="letter" id="z" src="images/letterZ.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="wordGuess" id="wordGuess">
+  </div>
+
+</div>
+</body>
+
+
+</html>

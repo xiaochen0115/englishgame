@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Hang Man</title>
+
+    <link href="mystyle.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+
+      //放置类别及图片
+      $(".main").find(".category").each(function() {
+        var categoryId = parseInt($(this).attr('id'));
+        $(this).find(".picture").attr('src', 'images/' + categories[categoryId] + '/' + words[categoryId][0].replace(/\s/g,"") + '.png');
+        $(this).find(".categoryName").text(categories[categoryId]);
+      });
+
+      var review = getUrlParam("review");
+      $(".picture").on("mouseover mouseout", function(e){
+        if(event.type == "mouseover") {
+          var cId = parseInt($(e.target).parent().attr('id'));
+          $(".select_text").css("line-height","1rem");
+          $(".category_text").text(words[cId]);
+        }else if(event.type == "mouseout") {
+          $(".select_text").css("line-height","3.8rem");
+          $(".category_text").text("");
+        }
+      });
+
+      $(".picture").click(function(e) {
+        var id = $(e.target).parent().attr('id');
+        console.log("id="+id);
+        if (review == 1) {
+           window.location.href="review.html?id=" + id;
+        } else {
+           window.location.href="main.html?id=" + id;
+        }
+      });
+
+    });
+</script>
+
+</head>
+<body>
+  <div class="main">
+    <div class="select_text">
+        Select Content
+      <div class="category_text">
+      </div>
+    </div>
+
+    <!--first line -->
+    <div class="line">
+      <span class="category" id="1">
+        <img class="picture"/>
+        <div class="categoryName"></div>
+      </span>
+      <span class="category" id="2">
+        <img class="picture"/>
+        <div class="categoryName"></div>
+      </span>
+      <span class="category" id="3">
+        <img class="picture"/>
+        <div class="categoryName"></div>
+      </span>
+      <span class="category" id="4">
+        <img class="picture"/>
+        <div class="categoryName"></div>
+      </span>
+      <span class="category" id="5">
+        <img class="picture"/>
+        <div class="categoryName"></div>
+      </span>
+    </div>
+   
+  </div>
+</body>
+</html>

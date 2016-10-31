@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>Hang Man</title>
+
+    <link href="mystyle.css" rel="stylesheet">
+    <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="common.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+
+        var success = getUrlParam('success');
+        var id = getUrlParam('id');
+        var time = getUrlParam('time');
+        var score = getUrlParam('score');
+
+        if (success == 0) {
+            $(".topName").text("You Failed!");
+        } else {
+            $(".topName").text("Congratulations!");
+        }
+
+        if (id != null) {
+          $(".againButton").attr("href","main.html?id=" + id);
+        }
+        $(".timeValue").text(time);
+        $(".scoreValue").text(score);
+
+      });
+    </script>
+
+
+</head>
+<body>
+  <div class="main">
+    <div class="topName">
+      Hang Man
+    </div>
+
+    <div class="timeAndScore timeBroadWidth">
+        <span class="normalText bigFontSize">
+        Time 
+        </span>
+        <br>
+        <span class="timeValue bigFontSize">
+        00:00:00
+        </span>
+        <br>
+        <div class="normalText bigFontSize">
+        Score 
+        </div>
+        <div class="scoreValue bigFontSize">
+        0
+        </div>
+    </div>
+
+    <div>
+      <a href="category.html"><button class="button buttonInterval">Back</button></a>
+      <a class="againButton" href="main.html"><button class="button">Again</button></a>
+    </div>
+  </div>
+</body>
+</html>
